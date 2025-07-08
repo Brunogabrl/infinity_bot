@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <model name="lidar_model">
+    <static>true</static>
+    <link name="lidar_link">
+      <visual name="lidar_visual">
+        <geometry>
+          <mesh>
+            <uri>model://infinity_bot/meshes/lidar.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="lidar_collision">
+        <geometry>
+          <mesh>
+            <uri>model://infinity_bot/meshes/lidar.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>
