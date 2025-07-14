@@ -1,0 +1,34 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/brunotavares/ros2_ws/install/velodyne_pointcloud/include/**",
+        "/home/brunotavares/ros2_ws/install/velodyne_driver/include/**",
+        "/home/brunotavares/ros2_ws/install/velodyne_msgs/include/**",
+        "/home/brunotavares/ros2_ws/install/velodyne_laserscan/include/**",
+        "/home/brunotavares/ros2_ws/install/my_robot_interfaces/include/**",
+        "/home/brunotavares/ros2_ws/install/clearpath_platform_msgs/include/**",
+        "/home/brunotavares/ros2_ws/install/clearpath_motor_msgs/include/**",
+        "/home/brunotavares/tracktor-beam/install/px4_ros2_cpp/include/**",
+        "/home/brunotavares/tracktor-beam/install/px4_msgs/include/**",
+        "/home/brunotavares/tracktor-beam/install/image_geometry/include/**",
+        "/home/brunotavares/tracktor-beam/install/cv_bridge/include/**",
+        "/home/brunotavares/uav_ws/install/ros2_python_extension/include/**",
+        "/home/brunotavares/uav_ws/install/gazebo_ros/include/**",
+        "/home/brunotavares/uav_ws/install/gazebo_msgs/include/**",
+        "/opt/ros/humble/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

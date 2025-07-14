@@ -48,12 +48,49 @@ def generate_launch_description():
     )
 
 
+    scan_bridge = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        arguments=[
+            '/scan@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan'
+        ],
+        output='screen'
+    )
+        
+    odom_bridge = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        arguments=[
+            '/odom@nav_msgs/msg/Odometry@gz.msgs.Odometry'
+        ],
+        output='screen'
+    )
+        
+    points_bridge = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        arguments=[
+            '/scan/points@sensor_msgs/msg/PointCloud2@gz.msgs.PointCloudPacked'
+        ],
+        output='screen'
+    )
+
+
     # Bridge para o tópico /cmd_vel entre ROS 2 e Gazebo
     cmd_vel_bridge = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
         arguments=[
             '/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist'
+        ],
+        output='screen'
+    )
+
+    imu_bridge = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        arguments=[
+            'imu@sensor_msgs/msg/Imu@gz.msgs.IMU'
         ],
         output='screen'
     )
@@ -71,5 +108,9 @@ def generate_launch_description():
         gz_sim,
         spawn_entity,
         cmd_vel_bridge,
+        scan_bridge,
+        odom_bridge,
+        points_bridge,
+        imu_bridge,
         # teleop
     ])
